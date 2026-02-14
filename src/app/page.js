@@ -7,41 +7,42 @@ import Hero from "@/components/Hero";
 import SectionTitle from "@/components/SectionTitle";
 import ServiceCard from "@/components/ServiceCard";
 import ImageGrid from "@/components/ImageGrid";
+import PricingTable from "@/components/PricingTable";
 import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
-    <div className="bg-primary min-h-screen text-white font-sans overflow-x-hidden">
+    <div className="bg-white min-h-screen text-slate-900 font-sans overflow-x-hidden">
       <Navbar />
       <Hero />
 
       {/* About Section */}
       <section id="about" className="container mx-auto px-6 py-24 md:py-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-sm font-bold uppercase tracking-widest text-gold-500 mb-2">Our Story</h2>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold leading-tight mb-6">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-2">Our Story</h2>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black leading-tight mb-8 text-slate-900">
               Crafting Excellence, <br /> Building Trust.
             </h1>
-            <p className="text-gray-400 leading-relaxed mb-6">
-              At <strong className="text-white">GUHAN Construction & Developers</strong>, under the visionary leadership of <strong className="text-white">Raja S</strong>, we redefine the art of construction. With a commitment to quality, transparency, and innovation, we transform complex challenges into enduring structures.
+            <p className="text-slate-600 leading-relaxed mb-8 text-lg font-medium">
+              At <strong className="text-primary tracking-tight font-black">GUHAN CONSTRUCTION</strong>, we redefine the art of development. With a commitment to quality, transparency, and innovation, we transform complex challenges into enduring landmarks.
             </p>
-            <div className="flex space-x-8 mt-8">
+            <div className="flex space-x-12 mt-10">
               <div className="text-center">
-                <h3 className="text-3xl font-bold text-gold-500">10+</h3>
-                <p className="text-xs uppercase tracking-wider text-gray-500 mt-1">Years Experience</p>
+                <h3 className="text-4xl font-black text-primary">10+</h3>
+                <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold mt-2">Years Experience</p>
               </div>
               <div className="text-center">
-                <h3 className="text-3xl font-bold text-gold-500">50+</h3>
-                <p className="text-xs uppercase tracking-wider text-gray-500 mt-1">Projects Completed</p>
+                <h3 className="text-4xl font-black text-primary">50+</h3>
+                <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold mt-2">Projects Completed</p>
               </div>
               <div className="text-center">
-                <h3 className="text-3xl font-bold text-gold-500">100%</h3>
-                <p className="text-xs uppercase tracking-wider text-gray-500 mt-1">Client Satisfaction</p>
+                <h3 className="text-4xl font-black text-primary">100%</h3>
+                <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold mt-2">Client Satisfaction</p>
               </div>
             </div>
           </motion.div>
@@ -49,24 +50,24 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative h-[500px] w-full bg-gray-900 rounded-lg overflow-hidden border border-gray-800"
+            className="relative h-[550px] w-full bg-slate-50 rounded-3xl overflow-hidden border border-gray-100 shadow-2xl"
           >
-            {/* Placeholder for About Image */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-gold-900/20 to-transparent z-10" />
+            {/* Subtle Texture Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent z-10" />
             <img
               src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
               alt="Construction Site"
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              className="w-full h-full object-cover transition-all duration-700 hover:scale-105 opacity-90"
             />
           </motion.div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="bg-secondary py-24 md:py-32">
+      <section id="services" className="bg-slate-50 py-24 md:py-36 border-y border-gray-100">
         <div className="container mx-auto px-6">
-          <SectionTitle subtitle="What We Do" title="Our Expertise" className="mb-16" />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <SectionTitle subtitle="What We Do" title="Our Expertise" className="mb-20" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <ServiceCard
               icon={HomeIcon}
               title="Residential Construction"
@@ -105,63 +106,67 @@ const Home = () => {
       <section id="projects" className="container mx-auto px-6 py-24 md:py-32">
         <SectionTitle subtitle="Our Portfolio" title="Featured Projects" className="mb-16" />
         <ImageGrid />
-        <div className="text-center mt-12">
-          <a href="/projects" className="inline-block px-8 py-3 bg-transparent border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-black transition-colors font-bold uppercase tracking-widest text-sm">
+        <div className="text-center mt-16">
+          <a href="/projects" className="inline-block px-12 py-5 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-500 font-bold uppercase tracking-widest text-[10px] rounded-full">
             View All Projects
           </a>
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <PricingTable />
+
       {/* Why Choose Us */}
-      <section className="bg-secondary py-24 relative overflow-hidden">
+      <section className="bg-white py-24 relative overflow-hidden border-t border-gray-100">
         <div className="absolute top-0 left-0 w-full h-full opacity-5 bg-[url('/noise.png')] pointer-events-none" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <div className="space-y-10">
               <SectionTitle subtitle="Why Choose Us" title="Built on Integrity" className="text-left mb-8" />
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-black border border-gold-500/30 rounded-full text-gold-500">
-                    <ShieldCheck size={24} />
+              <div className="space-y-8">
+                <div className="flex items-start gap-6">
+                  <div className="p-5 bg-primary/10 border border-primary/20 rounded-2xl text-primary flex-shrink-0 shadow-lg shadow-primary/5">
+                    <ShieldCheck size={32} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-white mb-2">Unwavering Quality</h4>
-                    <p className="text-gray-400 text-sm">We never compromise on materials or workmanship. Our standards exceed industry norms.</p>
+                    <h4 className="text-2xl font-bold text-slate-900 mb-2 tracking-tight">Unwavering Quality</h4>
+                    <p className="text-slate-500 text-sm leading-relaxed font-medium">We never compromise on materials or workmanship. Our standards exceed industry norms for every project.</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-black border border-gold-500/30 rounded-full text-gold-500">
-                    <Clock size={24} />
+                <div className="flex items-start gap-6">
+                  <div className="p-5 bg-primary/10 border border-primary/20 rounded-2xl text-primary flex-shrink-0 shadow-lg shadow-primary/5">
+                    <Clock size={32} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-white mb-2">Timely Delivery</h4>
-                    <p className="text-gray-400 text-sm">We respect your time. Our project management ensures milestones are met on schedule.</p>
+                    <h4 className="text-2xl font-bold text-slate-900 mb-2 tracking-tight">Timely Delivery</h4>
+                    <p className="text-slate-500 text-sm leading-relaxed font-medium">We respect your time. Our rigorous project management ensures all milestones are met with precision.</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-black border border-gold-500/30 rounded-full text-gold-500">
-                    <ThumbsUp size={24} />
+                <div className="flex items-start gap-6">
+                  <div className="p-5 bg-primary/10 border border-primary/20 rounded-2xl text-primary flex-shrink-0 shadow-lg shadow-primary/5">
+                    <ThumbsUp size={32} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-white mb-2">Transparent Process</h4>
-                    <p className="text-gray-400 text-sm">No hidden costs. We maintain clear communication throughout the entire lifecycle.</p>
+                    <h4 className="text-2xl font-bold text-slate-900 mb-2 tracking-tight">Transparent Process</h4>
+                    <p className="text-slate-500 text-sm leading-relaxed font-medium">No hidden costs. We maintain clear, honest communication throughout the entire project lifecycle.</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="relative">
-              <div className="absolute inset-0 bg-gold-500/10 transform rotate-3 rounded-lg z-0" />
-              <div className="relative bg-black p-8 md:p-12 border border-gray-800 rounded-lg shadow-2xl z-10 flex flex-col justify-center h-full text-center md:text-left">
-                <h3 className="text-2xl font-serif font-bold text-white mb-6">Ready to Build Your Dream?</h3>
-                <p className="text-gray-400 mb-8">
+              <div className="absolute inset-0 bg-primary/5 transform -rotate-2 rounded-3xl z-0" />
+              <div className="relative bg-slate-900 p-10 md:p-16 rounded-3xl shadow-2xl z-10 flex flex-col justify-center h-full text-center md:text-left overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16 blur-3xl" />
+                <h3 className="text-4xl font-serif font-black text-primary mb-8 leading-tight">Ready to Build Your Dream?</h3>
+                <p className="text-slate-300 mb-10 text-lg font-medium">
                   Contact us today for a consultation on your next residential or commercial project. Let's create something extraordinary together.
                 </p>
-                <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
-                  <a href="tel:+919340000400" className="flex items-center justify-center gap-2 px-6 py-3 bg-gold-500 text-black font-bold uppercase text-sm hover:bg-gold-400 transition-colors">
+                <div className="flex flex-col md:flex-row gap-5 justify-center md:justify-start">
+                  <a href="tel:+919340000400" className="flex items-center justify-center gap-3 px-10 py-5 bg-primary text-white font-bold uppercase text-[10px] tracking-widest hover:bg-[#A6861B] transition-all duration-300 shadow-xl rounded-full">
                     <Phone size={18} /> Call Now
                   </a>
-                  <a href="/contact" className="flex items-center justify-center gap-2 px-6 py-3 border border-gray-600 text-white font-bold uppercase text-sm hover:border-gold-500 hover:text-gold-500 transition-colors">
+                  <a href="/contact" className="flex items-center justify-center gap-3 px-10 py-5 border border-white/20 text-white font-bold uppercase text-[10px] tracking-widest hover:border-primary hover:text-primary transition-all duration-300 rounded-full">
                     <Mail size={18} /> Email Us
                   </a>
                 </div>
@@ -171,24 +176,26 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Map Embed Section (simplified placeholder) */}
-      <section className="h-[400px] w-full bg-gray-900 relative">
+      {/* Map Embed Section */}
+      <section className="h-[550px] w-full bg-slate-100 relative">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.176460662287!2d78.1368936758655!3d9.919293474419515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5c64188b021%3A0xe53a316b23023e9f!2s80%20Feet%20Rd%2C%20Anna%20Nagar%2C%20Madurai%2C%20Tamil%20Nadu%20625020!5e0!3m2!1sen!2sin!4v1707223456789!5m2!1sen!2sin"
           width="100%"
           height="100%"
-          style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }}
+          style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="opacity-80 hover:opacity-100 transition-opacity duration-500"
+          className="opacity-90 hover:opacity-100 transition-all duration-1000"
         ></iframe>
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-gradient-to-b from-transparent to-black/80" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent pointer-events-none" />
       </section>
 
       <Footer />
     </div>
   );
 };
+
 
 export default Home;

@@ -2,25 +2,26 @@
 @config "../../tailwind.config.js";
 
 @theme {
-  --color-primary: #000000;
-  --color-gold-400: #F4C430;
-  --color-gold-500: #D4AF37;
-  --color-gold-600: #B8860B;
-  --color-secondary: #1A1A1A;
+  --color-primary: #C5A022;
+  --color-accent: #f1f5f9;
+  --color-accent-light: #f8fafc;
+  --color-secondary: #f8fafc;
 }
 
 @layer base {
   :root {
-    --primary: #000000;
-    --accent: #D4AF37;
-    --accent-light: #F4C430;
-    --text-main: #FFFFFF;
-    --text-muted: #9CA3AF;
+    --primary: #C5A022;
+    --accent: #f1f5f9;
+    --accent-light: #f8fafc;
+    --background: #ffffff;
+    --foreground: #000000;
+    --text-main: #000000;
+    --text-muted: #64748b;
   }
 }
 
 body {
-  background-color: var(--primary);
+  background-color: var(--background);
   color: var(--text-main);
   font-family: 'Inter', sans-serif;
 }

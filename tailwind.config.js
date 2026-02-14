@@ -15,18 +15,16 @@ module.exports = {
         },
         extend: {
             colors: {
-                primary: "#000000",
-                gold: {
-                    400: "#F4C430",
-                    500: "#D4AF37",
-                    600: "#B8860B",
+                primary: "#C5A022", // Premium Gold
+                accent: {
+                    400: "#f8fafc", // Very Light Slate
+                    500: "#f1f5f9", // Light Slate
+                    600: "#000000", // pure Black
                 },
-                secondary: "#1A1A1A",
-                border: "hsl(var(--border))",
-                input: "hsl(var(--input))",
-                ring: "hsl(var(--ring))",
-                background: "hsl(var(--background))",
-                foreground: "hsl(var(--foreground))",
+                secondary: "#f8fafc", // Light Background
+                background: "#ffffff",
+                foreground: "#000000",
+                muted: "#64748b",
             },
             fontFamily: {
                 serif: ["Cinzel", "serif"],

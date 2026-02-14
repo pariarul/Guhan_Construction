@@ -1,60 +1,68 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="relative bg-black border-t border-gray-800 text-gray-300 pt-16 pb-8">
+        <footer className="relative bg-slate-50 border-t border-gray-100 text-slate-600 pt-20 pb-12">
             <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
-
-                {/* About */}
-                <div className="space-y-4">
-                    <h2 className="text-2xl font-serif font-bold text-white tracking-widest">
-                        GUHAN
-                    </h2>
-                    <p className="text-sm leading-relaxed text-gray-400">
-                        Pioneering premium construction and development with integrity, quality, and innovation. Building dreams into reality.
-                    </p>
+                {/* Logo */}
+                <div className="flex flex-col md:flex-row items-center md:items-start md:justify-start gap-1">
+                    <Link href="/" className="flex items-center gap-2">
+                        <Image
+                            src="/company_logo.png"
+                            alt="Guhan Homes & Renovations"
+                            width={130}
+                            height={30}
+                            priority
+                            className="object-contain"
+                        />
+                    </Link>
                 </div>
 
                 {/* Quick Links */}
-                <div className="space-y-4">
-                    <h3 className="text-lg font-serif font-semibold text-gold-500">Quick Links</h3>
-                    <ul className="space-y-2 text-sm">
-                        <li><a href="/" className="hover:text-gold-400 transition-colors">Home</a></li>
-                        <li><a href="/about" className="hover:text-gold-400 transition-colors">About Us</a></li>
-                        <li><a href="/services" className="hover:text-gold-400 transition-colors">Services</a></li>
-                        <li><a href="/projects" className="hover:text-gold-400 transition-colors">Projects</a></li>
-                        <li><a href="/contact" className="hover:text-gold-400 transition-colors">Contact</a></li>
+                <div className="space-y-6">
+                    <h3 className="text-lg font-serif font-bold text-slate-900 uppercase tracking-widest">Quick Links</h3>
+                    <ul className="space-y-3 text-sm font-bold">
+                        <li><a href="/" className="hover:text-primary transition-colors text-slate-600">Home</a></li>
+                        <li><a href="/about" className="hover:text-primary transition-colors text-slate-600">About Us</a></li>
+                        <li><a href="/services" className="hover:text-primary transition-colors text-slate-600">Services</a></li>
+                        <li><a href="/projects" className="hover:text-primary transition-colors text-slate-600">Projects</a></li>
+                        <li><a href="/contact" className="hover:text-primary transition-colors text-slate-600">Contact</a></li>
                     </ul>
                 </div>
 
                 {/* Services */}
-                <div className="space-y-4">
-                    <h3 className="text-lg font-serif font-semibold text-gold-500">Our Services</h3>
-                    <ul className="space-y-2 text-sm">
-                        <li>Residential Construction</li>
-                        <li>Commercial Development</li>
-                        <li>Renovation & Remodeling</li>
-                        <li>Interior & Exterior Solutions</li>
-                        <li>Turnkey Projects</li>
+                <div className="space-y-6">
+                    <h3 className="text-lg font-serif font-bold text-slate-900 uppercase tracking-widest">Our Services</h3>
+                    <ul className="space-y-3 text-sm font-medium text-slate-600">
+                        <li className="hover:text-primary transition-colors cursor-default">Residential Construction</li>
+                        <li className="hover:text-primary transition-colors cursor-default">Commercial Development</li>
+                        <li className="hover:text-primary transition-colors cursor-default">Renovation & Remodeling</li>
+                        <li className="hover:text-primary transition-colors cursor-default">Interior & Exterior Solutions</li>
+                        <li className="hover:text-primary transition-colors cursor-default">Turnkey Projects</li>
                     </ul>
                 </div>
 
                 {/* Contact Info */}
-                <div className="space-y-4">
-                    <h3 className="text-lg font-serif font-semibold text-gold-500">Contact Us</h3>
-                    <p className="text-sm text-gray-400">
-                        No 9A, ARM Complex, 80ft Road,<br /> Annanagar, Madurai – 625020
-                    </p>
-                    <p className="text-sm font-semibold text-white">+91 93400 00400</p>
-                    <a href="mailto:guhanconstructionanddevelopers@gmail.com" className="text-sm text-gold-500 hover:underline break-all">
-                        guhanconstructionanddevelopers@gmail.com
-                    </a>
+                <div className="space-y-6">
+                    <h3 className="text-lg font-serif font-bold text-slate-900 uppercase tracking-widest">Contact Us</h3>
+                    <div className="space-y-4">
+                        <p className="text-sm text-slate-500 font-medium leading-relaxed">
+                            No 9A, ARM Complex, 80ft Road,<br /> Annanagar, Madurai – 625020
+                        </p>
+                        <p className="text-lg font-black text-slate-900 tracking-tight">+91 93400 00400</p>
+                        <a href="mailto:midhunahomes@gmail.com" className="block text-sm text-primary font-bold hover:underline break-all">
+                            midhunahomes@gmail.com
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <div className="mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
-                <p>&copy; {currentYear} GUHAN Construction & Developers. All Rights Reserved.</p>
-                <p className="mt-2">Designed with Passion & Precision</p>
+            <div className="mt-20 pt-10 border-t border-gray-100 text-center">
+                <p className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">&copy; {currentYear} GUHAN HOMES AND RENOVATIONS PVT.LTD. All Rights Reserved.</p>
+                <p className="mt-4 text-[9px] text-slate-300 font-serif italic tracking-widest opacity-60">premium luxury series</p>
             </div>
         </footer>
     );

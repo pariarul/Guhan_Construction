@@ -9,22 +9,22 @@ import { ArrowRight } from "lucide-react";
 
 export default function Projects() {
     return (
-        <div className="bg-primary min-h-screen text-white font-sans">
+        <div className="bg-white min-h-screen text-slate-900 font-sans">
             <Navbar />
 
-            <div className="pt-32 pb-16 bg-secondary">
+            <div className="pt-32 pb-16 bg-slate-50 border-b border-gray-100 shadow-sm">
                 <SectionTitle subtitle="Our Portfolio" title="Showcase of Excellence" />
             </div>
 
-            <div className="container mx-auto px-6 py-12">
+            <div className="container mx-auto px-6 py-24">
                 <ImageGrid />
 
-                <div className="mt-16 text-center text-gray-400 max-w-2xl mx-auto">
-                    <p className="mb-8">
-                        These are just a few examples of our work. We have successfully delivered over 50 projects across Madurai and Tamil Nadu, ranging from individual residences to large commercial complexes.
+                <div className="mt-24 text-center text-slate-500 max-w-3xl mx-auto border-t border-gray-100 pt-16">
+                    <p className="mb-12 text-lg leading-relaxed font-medium">
+                        These are just a few examples of our high-end developments. We have successfully delivered over 50 premier projects across Madurai and Tamil Nadu, ranging from exclusive residences to sophisticated commercial landmarks.
                     </p>
-                    <a href="/contact" className="inline-flex items-center gap-2 text-gold-500 hover:text-white transition-colors uppercase font-bold text-sm tracking-widest group">
-                        Start Your Project <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                    <a href="/contact" className="inline-flex items-center gap-4 text-primary hover:text-slate-900 transition-all duration-500 uppercase font-black text-[10px] tracking-[0.4em] group">
+                        Start Your Project <ArrowRight className="group-hover:translate-x-3 transition-transform font-black" />
                     </a>
                 </div>
             </div>
