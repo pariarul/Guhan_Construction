@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,18 +12,56 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4 text-center md:text-left">
 
           {/* Logo */}
-          <div className="flex flex-col items-center md:items-start">
-            <Link href="/" className="inline-flex items-center">
-              <Image
-                src="/company_logo.png"
-                alt="Guhan Homes & Renovations"
-                width={140}
-                height={40}
-                priority
-                className="object-contain"
-              />
-            </Link>
-          </div>
+{/* Logo */}
+<div className="flex flex-col items-center md:items-start space-y-6">
+  <Link href="/" className="inline-flex items-center">
+    <Image
+      src="/company_logo.png"
+      alt="Guhan Homes & Renovations"
+      width={140}
+      height={40}
+      priority
+      className="object-contain"
+    />
+  </Link>
+
+    {/* Small Company Content */}
+  <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
+    Building premium homes with quality craftsmanship,
+    modern design, and trusted excellence.
+  </p>
+
+  {/* Social Media Icons */}
+  <div className="flex items-center gap-5">
+    <a
+      href="https://www.facebook.com/share/17rasg6kx4/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-slate-500 hover:text-blue-600 transition-colors"
+    >
+      <Facebook size={20} />
+    </a>
+
+    <a
+      href="https://www.instagram.com/guhan_construction_developers/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-slate-500 hover:text-pink-500 transition-colors"
+    >
+      <Instagram size={20} />
+    </a>
+
+    <a
+      href="https://x.com/Guhandevelopers"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-slate-500 hover:text-black transition-colors"
+    >
+      <Twitter size={20} />
+    </a>
+  </div>
+</div>
+
 
           {/* Quick Links */}
           <div className="space-y-5">
