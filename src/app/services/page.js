@@ -67,6 +67,73 @@ export default function Services() {
                     ))}
                 </div>
             </div>
+                  <div className="bg-white py-24">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            {[
+              { value: "50+", label: "Projects Completed" },
+              { value: "20+", label: "Ongoing Projects" },
+              { value: "10+", label: "Years of Excellence" },
+              { value: "100%", label: "Client Satisfaction" },
+            ].map((stat, i) => (
+              <div key={i}>
+                <h4 className="text-5xl font-black text-primary mb-3">
+                  {stat.value}
+                </h4>
+                <p className="uppercase tracking-widest text-xs text-slate-500">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+            {/* Industries */}
+      <div className="bg-white text-slate-900 py-24">
+        <div className="container mx-auto px-6">
+          <h3 className="text-center text-3xl font-serif font-black mb-16">
+            Industries We Serve
+          </h3>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              "Residential Housing",
+              "Corporate Offices",
+              "Retail & Showrooms",
+              "Hospitality",
+              "Educational Institutions",
+              "Healthcare Facilities",
+              "Industrial Parks",
+              "Mixed-Use Developments",
+            ].map((industry, i) => (
+              <div
+                key={i}
+                className="border rounded-xl py-6 font-black text-sm uppercase tracking-widest"
+              >
+                {industry}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="bg-primary py-20 text-center">
+        <h3 className="text-3xl font-serif font-black mb-6">
+          Ready to Start Your Project?
+        </h3>
+        <p className="mb-10 text-white/80">
+          Let’s discuss your vision and bring it to life.
+        </p>
+        <a
+          href="https://wa.me/919340000400"
+  target="_blank"
+  rel="noopener noreferrer"
+          className="inline-block px-12 py-5 bg-white text-primary font-black uppercase tracking-widest text-xs rounded-full hover:bg-slate-100 transition"
+        >
+          Request a Consultation
+        </a>
+      </div>
 
             <Footer />
         </div>

@@ -68,7 +68,9 @@ const Navbar = () => {
                     ))}
 
                     <Link
-                        href="/contact"
+                         href="https://wa.me/919340000400"
+  target="_blank"
+  rel="noopener noreferrer"
                         className={`px-6 py-2 border text-[11px] font-bold uppercase tracking-widest transition-all duration-300 rounded-full ${isScrolled
                             ? "border-primary text-primary hover:bg-primary hover:text-white"
                             : "border-white text-white hover:bg-white hover:text-black"
@@ -115,7 +117,7 @@ const Navbar = () => {
                                 </div>
                                 <div className="flex justify-center items-center gap-3">
                                     <Mail className="w-5 h-5 text-primary" />
-                                    <span className="font-bold text-slate-900">midhunahomes@gmail.com</span>
+                                    <span className="font-bold text-slate-900">guhanconstructionanddevelopments@gmail.com</span>
                                 </div>
                             </div>
                         </div>

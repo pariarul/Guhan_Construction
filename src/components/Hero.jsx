@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
     return (
-        <div className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-white">
+        <div className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-white mt-10">
             {/* Background Image / Pattern */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent z-10" />
@@ -35,7 +35,7 @@ const Hero = () => {
                     transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
                     className="text-lg md:text-2xl text-slate-600 font-medium max-w-3xl mx-auto"
                 >
-                    Premium Residential & Commercial Developments by <span className="font-bold text-primary tracking-tight">GUHAN CONSTRUCTION</span>.
+                    Premium Residential & Commercial Developments by <span className="font-bold text-primary tracking-tight">GUHAN CONSTRUCTION & DEVELOPMENT  </span>
                 </motion.p>
 
                 <motion.div
@@ -51,7 +51,9 @@ const Hero = () => {
                         Explore Portfolio
                     </a>
                     <a
-                        href="/contact"
+                        href="https://wa.me/919340000400"
+  target="_blank"
+  rel="noopener noreferrer"
                         className="px-10 py-5 border-2 border-slate-900 text-slate-900 font-bold uppercase tracking-[0.2em] text-xs hover:bg-slate-900 hover:text-white transition-all duration-500 rounded-full"
                     >
                         Contact Us
