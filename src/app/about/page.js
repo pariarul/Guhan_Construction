@@ -135,10 +135,10 @@ export default function About() {
       <div className="bg-slate-900 py-24 text-white">
         <div className="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           {[
-            { value: "150+", label: "Projects" },
+            { value: "100+", label: "Projects" },
             { value: "300+", label: "Clients" },
             { value: "50+", label: "Ongoing" },
-            { value: "15+", label: "Years" },
+            { value: "20+", label: "Years" },
           ].map((s, i) => (
             <div key={i}>
               <h4 className="text-5xl font-black text-primary">{s.value}</h4>

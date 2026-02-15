@@ -71,9 +71,9 @@ export default function Services() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
             {[
-              { value: "50+", label: "Projects Completed" },
-              { value: "20+", label: "Ongoing Projects" },
-              { value: "10+", label: "Years of Excellence" },
+              { value: "100+", label: "Projects Completed" },
+              { value: "50+", label: "Ongoing Projects" },
+              { value: "20+", label: "Years of Excellence" },
               { value: "100%", label: "Client Satisfaction" },
             ].map((stat, i) => (
               <div key={i}>

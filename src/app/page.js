@@ -33,11 +33,11 @@ const Home = () => {
             </p>
             <div className="flex space-x-12 mt-10">
               <div className="text-center">
-                <h3 className="text-4xl font-black text-primary">10+</h3>
+                <h3 className="text-4xl font-black text-primary">20+</h3>
                 <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold mt-2">Years Experience</p>
               </div>
               <div className="text-center">
-                <h3 className="text-4xl font-black text-primary">50+</h3>
+                <h3 className="text-4xl font-black text-primary">100+</h3>
                 <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold mt-2">Projects Completed</p>
               </div>
               <div className="text-center">
@@ -117,64 +117,95 @@ const Home = () => {
       <PricingTable />
 
       {/* Why Choose Us */}
-      <section className="bg-white py-24 relative overflow-hidden border-t border-gray-100">
-        <div className="absolute top-0 left-0 w-full h-full opacity-5 bg-[url('/noise.png')] pointer-events-none" />
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-            <div className="space-y-10">
-              <SectionTitle subtitle="Why Choose Us" title="Built on Integrity" className="text-left mb-8" />
-              <div className="space-y-8">
-                <div className="flex items-start gap-6">
-                  <div className="p-5 bg-primary/10 border border-primary/20 rounded-2xl text-primary flex-shrink-0 shadow-lg shadow-primary/5">
-                    <ShieldCheck size={32} />
-                  </div>
-                  <div>
-                    <h4 className="text-2xl font-bold text-slate-900 mb-2 tracking-tight">Unwavering Quality</h4>
-                    <p className="text-slate-500 text-sm leading-relaxed font-medium">We never compromise on materials or workmanship. Our standards exceed industry norms for every project.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-6">
-                  <div className="p-5 bg-primary/10 border border-primary/20 rounded-2xl text-primary flex-shrink-0 shadow-lg shadow-primary/5">
-                    <Clock size={32} />
-                  </div>
-                  <div>
-                    <h4 className="text-2xl font-bold text-slate-900 mb-2 tracking-tight">Timely Delivery</h4>
-                    <p className="text-slate-500 text-sm leading-relaxed font-medium">We respect your time. Our rigorous project management ensures all milestones are met with precision.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-6">
-                  <div className="p-5 bg-primary/10 border border-primary/20 rounded-2xl text-primary flex-shrink-0 shadow-lg shadow-primary/5">
-                    <ThumbsUp size={32} />
-                  </div>
-                  <div>
-                    <h4 className="text-2xl font-bold text-slate-900 mb-2 tracking-tight">Transparent Process</h4>
-                    <p className="text-slate-500 text-sm leading-relaxed font-medium">No hidden costs. We maintain clear, honest communication throughout the entire project lifecycle.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <section className="bg-white py-24 relative overflow-hidden border-t border-gray-100">
+      {/* Background Noise */}
+      <div className="absolute inset-0 opacity-5 bg-[url('/noise.png')] pointer-events-none" />
 
-            <div className="relative">
-              <div className="absolute inset-0 bg-primary/5 transform -rotate-2 rounded-3xl z-0" />
-              <div className="relative bg-slate-900 p-10 md:p-16 rounded-3xl shadow-2xl z-10 flex flex-col justify-center h-full text-center md:text-left overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16 blur-3xl" />
-                <h3 className="text-4xl font-serif font-black text-primary mb-8 leading-tight">Ready to Build Your Dream?</h3>
-                <p className="text-slate-300 mb-10 text-lg font-medium">
-                  Contact us today for a consultation on your next residential or commercial project. Let's create something extraordinary together.
-                </p>
-                <div className="flex flex-col md:flex-row gap-5 justify-center md:justify-start">
-                  <a href="tel:+919340000400" className="flex items-center justify-center gap-3 px-10 py-5 bg-primary text-white font-bold uppercase text-[10px] tracking-widest hover:bg-[#A6861B] transition-all duration-300 shadow-xl rounded-full">
-                    <Phone size={18} /> Call Now
-                  </a>
-                  <a href="/contact" className="flex items-center justify-center gap-3 px-10 py-5 border border-white/20 text-white font-bold uppercase text-[10px] tracking-widest hover:border-primary hover:text-primary transition-all duration-300 rounded-full">
-                    <Mail size={18} /> Email Us
-                  </a>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+          
+          {/* Left Content */}
+          <div className="space-y-10">
+            <SectionTitle
+              subtitle="Why Choose Us"
+              title="Built on Integrity"
+              className="text-left mb-8"
+            />
+
+            <div className="space-y-8">
+              {[
+                {
+                  icon: ShieldCheck,
+                  title: "Unwavering Quality",
+                  desc: "We never compromise on materials or workmanship. Our standards exceed industry norms for every project.",
+                },
+                {
+                  icon: Clock,
+                  title: "Timely Delivery",
+                  desc: "We respect your time. Our rigorous project management ensures all milestones are met with precision.",
+                },
+                {
+                  icon: ThumbsUp,
+                  title: "Transparent Process",
+                  desc: "No hidden costs. We maintain clear, honest communication throughout the entire project lifecycle.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-6">
+                  <div className="p-5 bg-primary/10 border border-primary/20 rounded-2xl text-primary flex-shrink-0 shadow-lg shadow-primary/5">
+                    <item.icon size={32} />
+                  </div>
+                  <div>
+                    <h4 className="text-2xl font-bold text-slate-900 mb-2">
+                      {item.title}
+                    </h4>
+                    <p className="text-slate-500 text-sm leading-relaxed font-medium">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right CTA Card */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-primary/5 -rotate-2 rounded-3xl" />
+
+            <div className="relative bg-slate-900 p-10 md:p-16 rounded-3xl shadow-2xl z-10 flex flex-col justify-center h-full overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16 blur-3xl" />
+
+              <h3 className="text-4xl font-serif font-black text-primary mb-8">
+                Ready to Build Your Dream?
+              </h3>
+
+              <p className="text-slate-300 mb-10 text-lg font-medium">
+                Contact us today for a consultation on your next residential or
+                commercial project. Let’s create something extraordinary together.
+              </p>
+
+              <div className="flex flex-col md:flex-row gap-5">
+                {/* CALL */}
+                <a
+                  href="tel:+919340000400"
+                  className="flex items-center justify-center px-10 py-5 bg-primary text-white font-bold uppercase text-[10px] tracking-widest rounded-full hover:bg-[#A6861B] transition"
+                >
+                  📞 Call Now
+                </a>
+
+                {/* EMAIL */}
+                <a
+                  href="mailto:guhanconstructionanddevelopments@gmail.com"
+                  className="flex items-center justify-center gap-3 px-10 py-5 border border-white/20 text-white font-bold uppercase text-[10px] tracking-widest hover:border-primary hover:text-primary transition rounded-full"
+                >
+                  <Mail size={16} /> Email Us
+                </a>
               </div>
             </div>
           </div>
+
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Map Embed Section */}
       <section className="h-[550px] w-full bg-slate-100 relative">

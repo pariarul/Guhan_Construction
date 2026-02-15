@@ -35,7 +35,7 @@ const Hero = () => {
                     transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
                     className="text-lg md:text-2xl text-slate-600 font-medium max-w-3xl mx-auto"
                 >
-                    Premium Residential & Commercial Developments by <span className="font-bold text-primary tracking-tight">GUHAN CONSTRUCTION & DEVELOPMENT  </span>
+                    Premium Residential & Commercial Developments by <span className="font-bold text-primary tracking-tight">GUHAN CONSTRUCTION & DEVELOPERS  </span>
                 </motion.p>
 
                 <motion.div
